@@ -1,0 +1,48 @@
+.chartPanelContainer {
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  .chartPanelHeader {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 24px;
+    border-bottom: 2px solid #ffffff;
+    background-color: rgb(34, 0, 97);
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .statusInfoContainer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .statusText {
+        @media only screen and (max-width: 1024px) {
+          font-size: 16px;
+        }
+      }
+
+      .statusIcon {
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+  }
+  .chartContainer {
+    width: 525px;
+    height: 338px;
+
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}
