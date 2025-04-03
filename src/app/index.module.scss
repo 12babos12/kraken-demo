@@ -1,0 +1,35 @@
+.notFoundPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 100vh;
+  background: linear-gradient(
+      217deg,
+      rgba(45, 13, 133, 0.8),
+      rgba(45, 13, 133, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(83, 7, 102, 0.8), rgba(83, 0, 102, 0) 70.71%),
+    linear-gradient(336deg, rgba(34, 0, 97, 0.8), rgba(34, 0, 97, 0) 70.71%);
+
+  @media only screen and (max-width: 1024px) {
+    padding: 48px 20px 20px 20px;
+  }
+
+  .dashboardButton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    background-color: rgb(49, 0, 139);
+    transition: background-color 0.3s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(81, 26, 233);
+    }
+  }
+}
