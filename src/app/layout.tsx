@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/common/trpc/client";
 import "~/common/styles/globals.css";
+import { WebSocketProvider } from "./_providers/WebSocketProvider";
 
 export const metadata: Metadata = {
   title: "Kraken Demo",
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <WebSocketProvider>{children}</WebSocketProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   );
