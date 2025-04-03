@@ -2,6 +2,7 @@ import { getQueryClient, HydrateClient, trpc } from "~/common/trpc/server";
 import { ASSET_TICKER_LIST } from "~/common/utils/assetTickerList";
 import styles from "./dashboard.module.scss";
 import { redirect } from "next/navigation";
+import { AssetTable } from "../_page-components/AssetTable/AssetTable";
 
 export default async function DashboardPage(dashboardProps: {
   searchParams?: Promise<{
@@ -50,7 +51,11 @@ export default async function DashboardPage(dashboardProps: {
 
   return (
     <HydrateClient>
-      <main className={styles.dashboardPageContainer}></main>
+      <main className={styles.dashboardPageContainer}>
+        <section className={styles.dashboardPanelsContainer}>
+          <AssetTable />
+        </section>
+      </main>
     </HydrateClient>
   );
 }
