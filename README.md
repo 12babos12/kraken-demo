@@ -12,4 +12,6 @@ Start the app locally with `npm run dev`.
 
 ## View app
 
-The app can be viewed on `localhost:3000` by default.
+Locally, the app can be viewed at `localhost:3000` by default.
+
+A deployed version is available at [https://kraken-demo-project.vercel.app/](https://kraken-demo-project.vercel.app/).
